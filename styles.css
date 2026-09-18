@@ -202,7 +202,6 @@ header.site{
 /* bold per-project accent colors, in the spirit of an editorial cover grid */
 .case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
 .case:nth-of-type(2) .case-media .frame{ --accent:#D9611F; }
-.case:nth-of-type(3) .case-media .frame{ --accent:#1F2A44; }
 .case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
 .case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
 
@@ -214,16 +213,17 @@ header.site{
 .case-media .frame:hover img{ transform:rotateY(-8deg) rotateX(2deg) rotateZ(-1deg) scale(1.06); }
 .case:nth-child(even) .case-media .frame:hover img{ transform:rotateY(8deg) rotateX(2deg) rotateZ(1deg) scale(1.06); }
 
-/* Sure Walk: a bare screen crop (no device frame) reads better flat and larger than 3D-tilted */
-.case:nth-of-type(3) .case-media .frame{ padding:20px; }
-.case:nth-of-type(3) .case-media img{
-  transform:none; filter:drop-shadow(0 18px 30px rgba(0,0,0,0.32)); max-height:100%;
+/* Sure Walk: solid orange splash with just the wordmark, no device frame */
+.case-media .frame.surewalk-frame{ padding:0; --accent:#C4622E; }
+.mock-splash{
+  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em;
+  font-size:clamp(30px,5vw,46px); color:#fff;
 }
-.case:nth-of-type(3) .case-media .frame:hover img{ transform:scale(1.035); }
 
 .case-media .frame::after{
   content:"View case study →";
-  position:absolute; left:14px; bottom:14px;
+  position:absolute; left:14px; bottom:14px; z-index:2;
   font-family:'Space Grotesk', sans-serif; font-size:11px; font-weight:600;
   letter-spacing:0.05em; text-transform:uppercase; color:var(--ink);
   background:var(--card); border:1px solid var(--line); border-radius:20px;
