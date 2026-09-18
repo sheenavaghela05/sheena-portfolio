@@ -311,6 +311,34 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 }
 .conclusion-list li strong{ color:var(--ink); }
 
+/* ---------- SCROLLING SCREEN DEMO ---------- */
+.scroll-demo-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; padding:12px 0 8px; }
+.scroll-demo{
+  width:320px; height:520px; max-width:100%; overflow:hidden; position:relative;
+  border-radius:34px; border:10px solid #14181f; background:#fff;
+  box-shadow:0 30px 54px -20px rgba(20,24,31,0.45), 0 6px 18px rgba(20,24,31,0.15);
+}
+.scroll-demo::after{
+  content:""; position:absolute; top:0; left:0; right:0; height:28px; z-index:2;
+  background:linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0));
+  pointer-events:none;
+}
+.scroll-demo img{
+  display:block; width:100%; height:auto;
+  animation:scrollDemo 9s cubic-bezier(.65,0,.35,1) infinite;
+}
+@keyframes scrollDemo{
+  0%   { transform:translateY(0); }
+  15%  { transform:translateY(0); }
+  50%  { transform:translateY(-180px); }
+  65%  { transform:translateY(-180px); }
+  100% { transform:translateY(0); }
+}
+@media (prefers-reduced-motion:reduce){
+  .scroll-demo img{ animation:none; }
+}
+.scroll-demo-caption{ font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em; }
+
 .proto-link{
   display:inline-block; margin-top:8px; font-size:14px; font-weight:600;
   color:var(--moss-dark); border-bottom:1px solid var(--moss-dark); text-transform:uppercase; letter-spacing:0.04em;
