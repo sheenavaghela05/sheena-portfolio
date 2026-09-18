@@ -306,8 +306,7 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   content:"\201C"; font-family:Georgia,serif; font-size:38px; line-height:1; color:var(--moss-dark);
   opacity:0.45; display:block; margin-bottom:4px;
 }
-.quote-card p{ font-style:italic; color:var(--ink); font-size:14.5px; margin-bottom:10px; max-width:none; }
-.quote-card span{ font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); }
+.quote-card p{ font-style:italic; color:var(--ink); font-size:14.5px; margin-bottom:0; max-width:none; }
 @media (max-width:640px){ .quote-grid{ grid-template-columns:1fr; } }
 
 /* ---------- SCROLLING SCREEN DEMO ---------- */
