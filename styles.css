@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Caveat+Brush&family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Caveat+Brush&display=swap');
 
 :root{
   --paper: #FAF8F1;
@@ -180,27 +180,23 @@ header.site{
 .case-media{ position:relative; display:flex; justify-content:center; isolation:isolate; }
 .case-media .frame{
   --accent: var(--moss-dark);
-  background:var(--accent); padding:40px; border-radius:8px; border:none;
+  background:var(--accent); padding:36px; border-radius:8px; border:none;
   overflow:hidden; max-width:460px; width:100%; aspect-ratio:4/3;
   display:flex; align-items:center; justify-content:center; position:relative;
   box-shadow:0 1px 2px rgba(33,40,32,0.08);
   transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
-  perspective:1400px;
 }
 .case-media img{
   width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; display:block;
-  transition:transform .5s cubic-bezier(.2,.8,.2,1);
-  filter:drop-shadow(16px 26px 26px rgba(0,0,0,0.28));
-  transform:rotateY(-20deg) rotateX(6deg) rotateZ(-2deg) translateZ(0);
-  transform-style:preserve-3d;
-}
-.case:nth-child(even) .case-media img{
-  transform:rotateY(20deg) rotateX(6deg) rotateZ(2deg) translateZ(0);
-  filter:drop-shadow(-16px 26px 26px rgba(0,0,0,0.28));
+  border-radius:4px;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+  filter:drop-shadow(0 18px 30px rgba(0,0,0,0.28));
 }
 
 /* bold per-project accent colors, in the spirit of an editorial cover grid */
 .case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
+.case:nth-of-type(2) .case-media .frame{ --accent:#D9611F; }
+.case:nth-of-type(3) .case-media .frame{ --accent:#1F2A44; }
 .case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
 .case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
 
@@ -209,52 +205,7 @@ header.site{
   transform:translateY(-6px) scale(1.025) !important;
   box-shadow:0 26px 44px -18px rgba(0,0,0,0.38), 0 6px 16px rgba(0,0,0,0.14);
 }
-.case-media .frame:hover img{ transform:rotateY(-8deg) rotateX(2deg) rotateZ(-1deg) scale(1.06); }
-.case:nth-child(even) .case-media .frame:hover img{ transform:rotateY(8deg) rotateX(2deg) rotateZ(1deg) scale(1.06); }
-
-/* Sure Walk: solid orange splash with just the wordmark, no device frame */
-.case-media .frame.surewalk-frame{ padding:0; --accent:#C4622E; }
-.mock-splash{
-  width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;
-}
-.mock-logo-icon{ width:38px; height:auto; margin-bottom:-8px; margin-left:-36px; }
-.mock-logo-text{
-  display:flex; align-items:baseline; gap:8px;
-  font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em;
-  font-size:clamp(30px,5vw,46px); color:#fff;
-}
-.mock-logo-text em{
-  font-family:'Caveat', cursive; font-style:normal; font-weight:500; font-size:1.05em;
-}
-
-/* HerdUp: recreated welcome screen — collage grid stays abstract color
-   blocks rather than the licensed stock photos used in the Figma file */
-.case-media .frame.herdup-frame{ --accent:#fff; border:1px solid var(--line); padding:0; }
-.herdup-frame .mock-splash{ padding:18px; }
-.mock-herdup-title-row{ display:flex; align-items:center; justify-content:center; gap:2px; margin-bottom:14px; }
-.mock-horns{ width:34px; height:auto; margin-right:-6px; }
-.mock-herdup-welcome{
-  font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14px;
-  color:#4b4b4b; margin-bottom:4px;
-}
-.mock-herdup-text{
-  font-family:'Space Grotesk', sans-serif; font-weight:800; letter-spacing:-0.01em;
-  font-size:clamp(24px,4vw,32px); color:#D9611F;
-}
-.mock-collage{
-  display:grid; grid-template-columns:1fr 1.3fr 1fr; grid-template-rows:1fr 1fr;
-  gap:5px; width:100%; max-width:230px; height:104px; margin-bottom:16px;
-}
-.mock-collage-tile{ border-radius:8px; }
-.mock-collage-tile:nth-child(1){ grid-column:1; grid-row:1; }
-.mock-collage-tile.mock-collage-tall{ grid-column:2; grid-row:1 / 3; }
-.mock-collage-tile:nth-child(3){ grid-column:3; grid-row:1; }
-.mock-collage-tile:nth-child(4){ grid-column:1; grid-row:2; }
-.mock-collage-tile:nth-child(5){ grid-column:3; grid-row:2; }
-.mock-cta{
-  font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14.5px; color:#fff;
-  background:#D9611F; border-radius:999px; padding:12px 34px; text-align:center;
-}
+.case-media .frame:hover img{ transform:scale(1.035); }
 
 .case-media .frame::after{
   content:"View case study →";
