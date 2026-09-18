@@ -359,14 +359,14 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   pointer-events:none;
 }
 .scroll-demo img{
-  display:block; width:100%; height:auto;
+  display:block; width:100%; height:auto; --scroll-amount:-180px;
   animation:scrollDemo 9s cubic-bezier(.65,0,.35,1) infinite;
 }
 @keyframes scrollDemo{
   0%   { transform:translateY(0); }
   15%  { transform:translateY(0); }
-  50%  { transform:translateY(-180px); }
-  65%  { transform:translateY(-180px); }
+  50%  { transform:translateY(var(--scroll-amount)); }
+  65%  { transform:translateY(var(--scroll-amount)); }
   100% { transform:translateY(0); }
 }
 @media (prefers-reduced-motion:reduce){
