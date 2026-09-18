@@ -173,19 +173,26 @@ header.site{
 
 .case-media{ position:relative; display:flex; justify-content:center; isolation:isolate; }
 .case-media .frame{
-  background:var(--paper); padding:0; border-radius:14px; border:1px solid var(--line);
-  overflow:hidden; max-width:320px; width:100%; aspect-ratio:4/5;
+  --accent: var(--moss-dark);
+  background:var(--accent); padding:40px; border-radius:8px; border:none;
+  overflow:hidden; max-width:460px; width:100%; aspect-ratio:4/3;
   display:flex; align-items:center; justify-content:center; position:relative;
-  box-shadow:0 1px 2px rgba(33,40,32,0.05);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease;
+  box-shadow:0 1px 2px rgba(33,40,32,0.08);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
 }
-.case-media img{ width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; display:block; transition:transform .5s ease; }
+.case-media img{ width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; display:block; transition:transform .5s ease; filter:drop-shadow(0 18px 30px rgba(0,0,0,0.22)); }
+
+/* bold per-project accent colors, in the spirit of an editorial cover grid */
+.case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
+.case:nth-of-type(2) .case-media .frame{ --accent:#D9611F; }
+.case:nth-of-type(3) .case-media .frame{ --accent:#1F2A44; }
+.case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
+.case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
 
 .case-media .frame:hover,
 .case-media .frame:focus-visible{
   transform:translateY(-6px) scale(1.025) !important;
-  box-shadow:0 22px 40px -18px rgba(33,40,32,0.28), 0 4px 14px rgba(33,40,32,0.08);
-  border-color:var(--moss-dark);
+  box-shadow:0 26px 44px -18px rgba(0,0,0,0.38), 0 6px 16px rgba(0,0,0,0.14);
 }
 .case-media .frame:hover img{ transform:scale(1.035); }
 
