@@ -297,6 +297,19 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 }
 .conclusion-list li strong{ color:var(--ink); }
 
+.quote-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0 4px; }
+.quote-card{
+  background:var(--paper-alt); border:1px solid var(--line); border-radius:10px;
+  padding:20px 22px; position:relative;
+}
+.quote-card::before{
+  content:"\201C"; font-family:Georgia,serif; font-size:38px; line-height:1; color:var(--moss-dark);
+  opacity:0.45; display:block; margin-bottom:4px;
+}
+.quote-card p{ font-style:italic; color:var(--ink); font-size:14.5px; margin-bottom:10px; max-width:none; }
+.quote-card span{ font-size:12px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); }
+@media (max-width:640px){ .quote-grid{ grid-template-columns:1fr; } }
+
 /* ---------- SCROLLING SCREEN DEMO ---------- */
 .scroll-demo-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; padding:12px 0 8px; }
 .scroll-demo{
