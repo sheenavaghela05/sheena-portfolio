@@ -201,7 +201,6 @@ header.site{
 
 /* bold per-project accent colors, in the spirit of an editorial cover grid */
 .case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
-.case:nth-of-type(2) .case-media .frame{ --accent:#D9611F; }
 .case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
 .case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
 
@@ -226,6 +225,35 @@ header.site{
 }
 .mock-logo-text em{
   font-family:'Caveat', cursive; font-style:normal; font-weight:500; font-size:1.05em;
+}
+
+/* HerdUp: recreated welcome screen — collage grid stays abstract color
+   blocks rather than the licensed stock photos used in the Figma file */
+.case-media .frame.herdup-frame{ --accent:#fff; border:1px solid var(--line); padding:0; }
+.herdup-frame .mock-splash{ padding:18px; }
+.mock-herdup-title-row{ display:flex; align-items:center; justify-content:center; gap:2px; margin-bottom:14px; }
+.mock-horns{ width:34px; height:auto; margin-right:-6px; }
+.mock-herdup-welcome{
+  font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14px;
+  color:#4b4b4b; margin-bottom:4px;
+}
+.mock-herdup-text{
+  font-family:'Space Grotesk', sans-serif; font-weight:800; letter-spacing:-0.01em;
+  font-size:clamp(24px,4vw,32px); color:#D9611F;
+}
+.mock-collage{
+  display:grid; grid-template-columns:1fr 1.3fr 1fr; grid-template-rows:1fr 1fr;
+  gap:5px; width:100%; max-width:230px; height:104px; margin-bottom:16px;
+}
+.mock-collage-tile{ border-radius:8px; }
+.mock-collage-tile:nth-child(1){ grid-column:1; grid-row:1; }
+.mock-collage-tile.mock-collage-tall{ grid-column:2; grid-row:1 / 3; }
+.mock-collage-tile:nth-child(3){ grid-column:3; grid-row:1; }
+.mock-collage-tile:nth-child(4){ grid-column:1; grid-row:2; }
+.mock-collage-tile:nth-child(5){ grid-column:3; grid-row:2; }
+.mock-cta{
+  font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14.5px; color:#fff;
+  background:#D9611F; border-radius:999px; padding:12px 34px; text-align:center;
 }
 
 .case-media .frame::after{
