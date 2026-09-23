@@ -209,7 +209,7 @@ header.site{
 
 /* ---------- THUMBNAIL ILLUSTRATIONS (home) ---------- */
 .thumb-illustration{
-  width:64%; height:64%; overflow:visible;
+  width:84%; height:84%; overflow:visible;
   transition:transform .4s cubic-bezier(.2,.8,.2,1);
 }
 .case-media .frame:hover .thumb-illustration{ transform:scale(1.06); }
@@ -230,7 +230,7 @@ header.site{
 .thumb-illustration .thumb-rays line{ stroke:var(--paper); stroke-width:2; stroke-linecap:round; }
 .thumb-illustration .thumb-leaf{ fill:var(--accent); transform-box:fill-box; transform-origin:bottom; }
 .thumb-illustration .thumb-badge-text{
-  font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:15px;
+  font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:20px;
   fill:var(--accent); letter-spacing:0.02em;
 }
 
