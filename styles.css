@@ -198,6 +198,7 @@ header.site{
 .case-media .frame.thumb-herdup{ --accent:#6B4A2F; }
 .case-media .frame.thumb-surewalk{ --accent:#1F2A44; }
 .case-media .frame.thumb-seedly{ --accent:#2B6A3C; }
+.case-media .frame.thumb-idetect{ --accent:#1E4D6B; }
 
 .case-media .frame:hover,
 .case-media .frame:focus-visible{
