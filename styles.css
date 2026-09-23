@@ -194,11 +194,10 @@ header.site{
 }
 
 /* bold per-project accent colors, in the spirit of an editorial cover grid */
-.case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
-.case:nth-of-type(2) .case-media .frame{ --accent:#6B4A2F; }
-.case:nth-of-type(3) .case-media .frame{ --accent:#1F2A44; }
-.case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
-.case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
+.case-media .frame.thumb-sbee{ --accent:#B4552E; }
+.case-media .frame.thumb-herdup{ --accent:#6B4A2F; }
+.case-media .frame.thumb-surewalk{ --accent:#1F2A44; }
+.case-media .frame.thumb-seedly{ --accent:#2B6A3C; }
 
 .case-media .frame:hover,
 .case-media .frame:focus-visible{
