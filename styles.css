@@ -195,7 +195,7 @@ header.site{
 
 /* bold per-project accent colors, in the spirit of an editorial cover grid */
 .case:nth-of-type(1) .case-media .frame{ --accent:#B4552E; }
-.case:nth-of-type(2) .case-media .frame{ --accent:#D9611F; }
+.case:nth-of-type(2) .case-media .frame{ --accent:#6B4A2F; }
 .case:nth-of-type(3) .case-media .frame{ --accent:#1F2A44; }
 .case:nth-of-type(4) .case-media .frame{ --accent:#2B6A3C; }
 .case:nth-of-type(5) .case-media .frame{ --accent:#243E8A; }
@@ -206,6 +206,100 @@ header.site{
   box-shadow:0 26px 44px -18px rgba(0,0,0,0.38), 0 6px 16px rgba(0,0,0,0.14);
 }
 .case-media .frame:hover img{ transform:scale(1.035); }
+
+/* ---------- THUMBNAIL ILLUSTRATIONS (home) ---------- */
+.thumb-illustration{
+  width:64%; height:64%; overflow:visible;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.case-media .frame:hover .thumb-illustration{ transform:scale(1.06); }
+
+.thumb-illustration .thumb-shape-soft{ fill:var(--paper); }
+.thumb-illustration .thumb-cutout{ fill:var(--accent); }
+.thumb-illustration .thumb-node{ fill:var(--paper); }
+.thumb-illustration .draw-line{
+  fill:none; stroke:var(--paper); stroke-width:2; stroke-linecap:round;
+  opacity:0.85;
+}
+.thumb-illustration .pulse-ring{
+  fill:none; stroke:var(--paper); stroke-width:1.4; stroke-opacity:0;
+}
+.thumb-illustration .thumb-star path{ fill:var(--paper); opacity:0.85; }
+.thumb-illustration .thumb-moon{ opacity:0.95; }
+.thumb-illustration .thumb-sun circle{ fill:var(--paper); }
+.thumb-illustration .thumb-rays line{ stroke:var(--paper); stroke-width:2; stroke-linecap:round; }
+.thumb-illustration .thumb-leaf{ fill:var(--accent); transform-box:fill-box; transform-origin:bottom; }
+.thumb-illustration .thumb-badge-text{
+  font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:15px;
+  fill:var(--accent); letter-spacing:0.02em;
+}
+
+@media (prefers-reduced-motion:no-preference){
+  @keyframes thumbAutoScroll{
+    0%, 12%{ transform:translateY(0); }
+    50%, 62%{ transform:translateY(var(--thumb-scroll-amount, -14px)); }
+    100%{ transform:translateY(0); }
+  }
+  .thumb-scroll{
+    animation:thumbAutoScroll 7s cubic-bezier(.65,0,.35,1) infinite;
+  }
+
+  .thumb-illustration .draw-line{
+    stroke-dasharray:260; stroke-dashoffset:260;
+    transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1) .15s;
+  }
+  .case.in .thumb-illustration .draw-line{ stroke-dashoffset:0; }
+
+  .thumb-illustration .thumb-node,
+  .thumb-illustration .thumb-pin-start,
+  .thumb-illustration .thumb-pin-end{
+    transform-box:fill-box; transform-origin:center; transform:scale(0);
+    transition:transform .45s cubic-bezier(.34,1.56,.64,1) .9s;
+  }
+  .case.in .thumb-illustration .thumb-node,
+  .case.in .thumb-illustration .thumb-pin-start,
+  .case.in .thumb-illustration .thumb-pin-end{ transform:scale(1); }
+  .thumb-illustration .thumb-node-a{ transition-delay:1s; }
+  .thumb-illustration .thumb-node-b{ transition-delay:1.08s; }
+  .thumb-illustration .thumb-node-c{ transition-delay:1.16s; }
+
+  .thumb-illustration .thumb-leaf{ transform:scaleY(0); }
+  .case.in .thumb-illustration .thumb-leaf{
+    transition:transform .55s cubic-bezier(.2,.8,.2,1);
+  }
+  .case.in .thumb-illustration .thumb-leaf-1{ transform:scaleY(1); transition-delay:.2s; }
+  .case.in .thumb-illustration .thumb-leaf-2{ transform:scaleY(1); transition-delay:.35s; }
+  .case.in .thumb-illustration .thumb-leaf-3{ transform:scaleY(1); transition-delay:.5s; }
+
+  @keyframes thumbFloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-4px); } }
+  .thumb-float{ animation:thumbFloat 4.5s ease-in-out infinite; }
+
+  @keyframes thumbPulseRing{
+    0%{ stroke-width:3; stroke-opacity:0.7; r:16; }
+    100%{ stroke-width:0; stroke-opacity:0; r:30; }
+  }
+  .case.in .pulse-ring{ animation:thumbPulseRing 2.6s ease-out infinite; }
+  .case.in .pulse-ring-2{ animation-delay:1.3s; }
+
+  @keyframes thumbTwinkle{ 0%,100%{ opacity:0.35; } 50%{ opacity:1; } }
+  .thumb-star-1{ animation:thumbTwinkle 2.8s ease-in-out infinite; }
+  .thumb-star-2{ animation:thumbTwinkle 2.8s ease-in-out infinite 1.1s; }
+
+  @keyframes thumbSway{ 0%,100%{ transform:rotate(-2deg); } 50%{ transform:rotate(2deg); } }
+  .case.in .thumb-leaf{ transform-origin:bottom; }
+  .case.in .thumb-leaf-1{ animation:thumbSway 5s ease-in-out infinite .8s; }
+  .case.in .thumb-leaf-2{ animation:thumbSway 5.6s ease-in-out infinite 1s; }
+  .case.in .thumb-leaf-3{ animation:thumbSway 5.2s ease-in-out infinite 1.2s; }
+
+  @keyframes thumbSpin{ to{ transform:rotate(360deg); } }
+  .thumb-sun{ transform-box:fill-box; transform-origin:center; }
+  .thumb-rays{ transform-box:fill-box; transform-origin:center; animation:thumbSpin 14s linear infinite; }
+  .case-media .frame:hover .thumb-rays{ animation-duration:3s; }
+
+  .case-media .frame:hover .thumb-node,
+  .case-media .frame:hover .thumb-pin-end{ transform:scale(1.15); }
+  .case-media .frame:hover .draw-line.thumb-route{ stroke-width:2.4; }
+}
 
 .case-media .frame::after{
   content:"View case study →";
