@@ -224,6 +224,7 @@ header.site{
 .thumb-illustration .pulse-ring{
   fill:none; stroke:var(--paper); stroke-width:1.4; stroke-opacity:0;
 }
+.thumb-illustration .thumb-pulse{ stroke:var(--accent); opacity:1; }
 .thumb-illustration .thumb-star path{ fill:var(--paper); opacity:0.85; }
 .thumb-illustration .thumb-moon{ opacity:0.95; }
 .thumb-illustration .thumb-sun circle{ fill:var(--paper); }
