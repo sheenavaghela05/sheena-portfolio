@@ -68,14 +68,7 @@ header.site{
   padding:22px 32px;
   max-width:var(--max); margin:0 auto;
 }
-.nav-name{ font-family:'Space Grotesk', sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.01em; display:inline-flex; align-items:center; }
-
-.coffee-mark{
-  width:18px; height:18px; margin-right:7px; flex-shrink:0;
-  fill:var(--moss);
-}
-.coffee-mark .steam{ stroke:var(--moss-dark); stroke-width:1; fill:none; stroke-linecap:round; }
-.coffee-mark-sm{ width:13px; height:13px; margin-right:5px; vertical-align:-2px; }
+.nav-name{ font-family:'Space Grotesk', sans-serif; font-size:18px; font-weight:600; letter-spacing:-0.01em; }
 .nav-links{ display:flex; gap:28px; align-items:center; font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em; }
 .nav-links a{ position:relative; border-bottom:1px solid transparent; padding-bottom:2px; transition:color .15s ease; }
 .nav-links a:not(.btn)::after{
@@ -138,35 +131,7 @@ header.site{
 }
 
 /* ---------- HERO (home, no image) ---------- */
-.hero{ padding:130px 0 90px; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
-
-.hero-coffee{
-  position:absolute; fill:var(--moss); opacity:0.35; pointer-events:none;
-}
-.hero-coffee .steam{ stroke:var(--moss-dark); stroke-width:1; fill:none; stroke-linecap:round; }
-.hero-coffee-1{ width:64px; height:64px; top:12%; right:8%; transform:rotate(-4deg); opacity:0.4; }
-.hero-coffee-2{ width:42px; height:42px; top:64%; right:22%; transform:rotate(3deg); opacity:0.28; }
-.hero-coffee-3{ width:48px; height:48px; top:4%; right:26%; transform:rotate(-2deg); opacity:0.22; }
-.hero-coffee-4{ width:34px; height:34px; top:80%; right:6%; transform:rotate(5deg); opacity:0.3; }
-.hero-coffee-5{ width:30px; height:30px; top:30%; left:4%; transform:rotate(-3deg); opacity:0.22; }
-.hero-coffee-6{ width:24px; height:24px; top:70%; left:10%; transform:rotate(4deg); opacity:0.2; }
-
-@media (max-width:800px){
-  .hero-coffee{ display:none; }
-}
-
-@media (prefers-reduced-motion:no-preference){
-  @keyframes coffeeSway{
-    0%, 100%{ transform:rotate(var(--coffee-rot, 0deg)) translateY(0); }
-    50%{ transform:rotate(var(--coffee-rot, 0deg)) translateY(-8px); }
-  }
-  .hero-coffee-1{ --coffee-rot:-4deg; animation:coffeeSway 7s ease-in-out infinite; }
-  .hero-coffee-2{ --coffee-rot:3deg; animation:coffeeSway 8.5s ease-in-out infinite .8s; }
-  .hero-coffee-3{ --coffee-rot:-2deg; animation:coffeeSway 6.5s ease-in-out infinite 1.4s; }
-  .hero-coffee-4{ --coffee-rot:5deg; animation:coffeeSway 7.8s ease-in-out infinite .4s; }
-  .hero-coffee-5{ --coffee-rot:-3deg; animation:coffeeSway 9s ease-in-out infinite 1.1s; }
-  .hero-coffee-6{ --coffee-rot:4deg; animation:coffeeSway 6.8s ease-in-out infinite 1.8s; }
-}
+.hero{ padding:130px 0 90px; border-bottom:1px solid var(--line); }
 .hero .wrap{ max-width:860px; }
 .hero .eyebrow{ margin-bottom:22px; }
 .hero h1{
@@ -195,9 +160,7 @@ header.site{
 .section-head{ margin-bottom:44px; display:flex; align-items:baseline; gap:14px; }
 .section-head h2{
   font-size:clamp(26px,3.4vw,34px); text-transform:uppercase; letter-spacing:0.01em;
-  display:inline-flex; align-items:center;
 }
-.section-head h2 .coffee-mark{ width:0.62em; height:0.62em; margin-right:0.22em; }
 .section-head .count{ color:var(--ink-soft); font-size:13px; letter-spacing:0.06em; text-transform:uppercase; }
 .section-head .rule{ flex:1; height:1px; background:var(--line); }
 
