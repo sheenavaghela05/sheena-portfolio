@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheena Vaghela — UX Designer & Researcher</title>
-<meta name="description" content="Sheena Vaghela's Portfolio — UX Designer & Researcher">
+<title>Sheena Vaghela — UX Designer &amp; Researcher</title>
+<meta name="description" content="Sheena Vaghela's Portfolio — UX Designer &amp; Researcher">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FAF8F1'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%234A6642' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
+<div class="hm-page" id="top">
 
 <header class="site">
   <div class="nav">
@@ -21,30 +24,41 @@
   </div>
 </header>
 
-<main id="top">
+<main>
 
-  <section class="hero">    <div class="wrap">
-      <div class="reveal in">
-        <div class="eyebrow">UX Designer &amp; Researcher</div>
-        <h1 style="margin-top:14px;">Hi, I'm <span class="signature">Sheena</span>.<br>I design with <em>research</em>, not guesswork.</h1>
-        <p>I design intuitive, user-centered experiences by digging into the research, both the hard data and human stories, to solve complex problems.</p>
-        <span class="hero-status"><span class="dot"></span>Open to new opportunities</span>
+  <section class="hm-hero">
+    <div class="hm-hero-in">
+      <div class="hm-eyebrow fx" style="--fd:.7s; --fdl:.1s;">UX Designer &amp; Researcher</div>
+      <h1>
+        <span class="ln"><span class="w" style="--d:0.15s;">Hi,</span><span class="w" style="--d:0.25s;">I’m</span><span class="w name tight" style="--d:0.35s;">Sheena</span><span class="w tight" style="--d:0.45s;">.</span></span>
+        <span class="ln"><span class="w" style="--d:0.55s;">I</span><span class="w" style="--d:0.62s;">design</span><span class="w" style="--d:0.69s;">with</span><span class="w key tight" style="--d:0.76s;">research</span><span class="w" style="--d:0.83s;">,</span><span class="w" style="--d:0.9s;">not</span><span class="w" style="--d:0.97s;">guesswork.</span></span>
+      </h1>
+      <p class="hm-intro fx" style="--fd:.8s; --fdl:.45s;">I design intuitive, user-centered experiences by digging into the research, both the hard data and human stories, to solve complex problems.</p>
+      <div class="hm-pillwrap fx" style="--fd:.8s; --fdl:.6s;">
+        <span class="hm-status"><span class="dot"></span>Open to new opportunities</span>
       </div>
     </div>
   </section>
 
-  <section class="section" id="work">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Selected work</h2>
-        <div class="rule"></div>
-        <span class="count">05 projects</span>
+  <section class="hm-work" id="work">
+    <div class="hm-card">
+      <div class="hm-headrow" data-reveal>
+        <h2 class="hm-h2">Selected work</h2>
+        <span class="hm-count">05 projects</span>
       </div>
 
-      <article class="case reveal">
-        <div class="case-index">01</div>
-        <div class="case-media">
-          <a class="frame thumb-surewalk" href="project-surewalk.html" aria-label="View Sure Walk App case study">
+      <a class="case hm-row reveal" href="project-surewalk.html" aria-label="View Sure Walk App case study">
+        <div class="hm-text">
+          <span class="case-index">01</span>
+          <div>
+            <span class="case-tag">UX Researcher, UX Designer</span>
+            <h3><span class="hm-hl">Sure Walk App</span></h3>
+            <p>Created a mobile app for Sure Walk, a campus safety service offering students safe rides on and off campus. The app streamlines ride requests, provides real-time tracking, and improves nighttime safety.</p>
+            <div class="hm-more">View case study <span class="arr">→</span></div>
+          </div>
+        </div>
+        <div class="case-media hm-thumb" style="--rot:1.5deg;">
+          <div class="hm-tilt"><div class="frame thumb-surewalk">
             <svg class="thumb-illustration" viewBox="0 0 200 150" aria-hidden="true">
               <g class="thumb-scroll">
                 <g class="thumb-star thumb-star-1"><path d="M48 38 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2Z" /></g>
@@ -59,20 +73,24 @@
                 </g>
               </g>
             </svg>
-          </a>
+          </div></div>
+          <span class="hm-tape" style="--tape:-3deg;"></span>
+          <div class="hm-note" aria-hidden="true">Safety at night</div>
         </div>
-        <div class="case-body">
-          <span class="case-tag">UX Researcher, UX Designer</span>
-          <h3>Sure Walk App</h3>
-          <p>Created a mobile app for Sure Walk, a campus safety service offering students safe rides on and off campus. The app streamlines ride requests, provides real-time tracking, and improves nighttime safety.</p>
-          <a class="case-link" href="project-surewalk.html">View case study</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="case reveal">
-        <div class="case-index">02</div>
-        <div class="case-media">
-          <a class="frame thumb-idetect" href="project-aidetect.html" aria-label="View Longhorn Life Sciences: iDetect case study (password protected)">
+      <a class="case hm-row reveal" href="project-aidetect.html" aria-label="View Longhorn Life Sciences: iDetect case study (password protected)">
+        <div class="hm-text">
+          <span class="case-index">02</span>
+          <div>
+            <span class="case-tag">UX Researcher, UX Designer</span>
+            <h3><span class="hm-hl">Longhorn Life Sciences: iDetect</span></h3>
+            <p>A wound-monitoring app that helps nurses track discharged patients' healing remotely, built during a healthcare incubator program. This case study covers real client work under NDA, so it's password protected.</p>
+            <div class="hm-more">View case study <span class="arr">→</span></div>
+          </div>
+        </div>
+        <div class="case-media hm-thumb" style="--rot:-1.2deg;">
+          <div class="hm-tilt"><div class="frame thumb-idetect">
             <svg class="thumb-illustration" viewBox="0 0 200 150" aria-hidden="true">
               <g class="thumb-scroll">
                 <line class="draw-line" x1="142" y1="50" x2="152" y2="42" />
@@ -86,20 +104,24 @@
                 </g>
               </g>
             </svg>
-          </a>
+          </div></div>
+          <span class="hm-tape" style="--tape:4deg;"></span>
+          <div class="hm-note" aria-hidden="true">Health</div>
         </div>
-        <div class="case-body">
-          <span class="case-tag">UX Researcher, UX Designer</span>
-          <h3>Longhorn Life Sciences: iDetect</h3>
-          <p>A wound-monitoring app that helps nurses track discharged patients' healing remotely, built during a healthcare incubator program. This case study covers real client work under NDA, so it's password protected.</p>
-          <a class="case-link" href="project-aidetect.html">View case study</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="case reveal">
-        <div class="case-index">03</div>
-        <div class="case-media">
-          <a class="frame thumb-herdup" href="project-herdup.html" aria-label="View HerdUp App case study">
+      <a class="case hm-row reveal" href="project-herdup.html" aria-label="View HerdUp App case study">
+        <div class="hm-text">
+          <span class="case-index">03</span>
+          <div>
+            <span class="case-tag">UX Designer, Usability Tester</span>
+            <h3><span class="hm-hl">HerdUp App</span></h3>
+            <p>Herdup supports UT Austin students in building community by connecting them with clubs, events, and involvement opportunities tailored to their interests.</p>
+            <div class="hm-more">View case study <span class="arr">→</span></div>
+          </div>
+        </div>
+        <div class="case-media hm-thumb" style="--rot:1deg;">
+          <div class="hm-tilt"><div class="frame thumb-herdup">
             <svg class="thumb-illustration" viewBox="0 0 200 150" aria-hidden="true">
               <g class="thumb-scroll">
                 <line class="draw-line" x1="142" y1="58" x2="152" y2="46" />
@@ -116,20 +138,24 @@
                 </g>
               </g>
             </svg>
-          </a>
+          </div></div>
+          <span class="hm-tape" style="--tape:-2deg;"></span>
+          <div class="hm-note" aria-hidden="true">Community</div>
         </div>
-        <div class="case-body">
-          <span class="case-tag">UX Designer, Usability Tester</span>
-          <h3>HerdUp App</h3>
-          <p>Herdup supports UT Austin students in building community by connecting them with clubs, events, and involvement opportunities tailored to their interests.</p>
-          <a class="case-link" href="project-herdup.html">View case study</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="case reveal">
-        <div class="case-index">04</div>
-        <div class="case-media">
-          <a class="frame thumb-sbee" href="project-electricity-access.html" aria-label="View SBEE Digital case study">
+      <a class="case hm-row reveal" href="project-electricity-access.html" aria-label="View SBEE Digital case study">
+        <div class="hm-text">
+          <span class="case-index">04</span>
+          <div>
+            <span class="case-tag">Product Designer</span>
+            <h3><span class="hm-hl">SBEE Digital: Electricity Access Platform for Benin</span></h3>
+            <p>A platform that digitizes and simplifies electricity applications for the Société Béninoise d'Énergie Électrique in Benin.</p>
+            <div class="hm-more">View case study <span class="arr">→</span></div>
+          </div>
+        </div>
+        <div class="case-media hm-thumb" style="--rot:-1.5deg;">
+          <div class="hm-tilt"><div class="frame thumb-sbee">
             <svg class="thumb-illustration" viewBox="0 0 200 150" aria-hidden="true">
               <g class="thumb-scroll">
                 <circle class="pulse-ring" cx="100" cy="75" r="47" />
@@ -140,20 +166,24 @@
                 </g>
               </g>
             </svg>
-          </a>
+          </div></div>
+          <span class="hm-tape" style="--tape:3deg;"></span>
+          <div class="hm-note" aria-hidden="true">Public services</div>
         </div>
-        <div class="case-body">
-          <span class="case-tag">Product Designer</span>
-          <h3>SBEE Digital: Electricity Access Platform for Benin</h3>
-          <p>A platform that digitizes and simplifies electricity applications for the Société Béninoise d'Énergie Électrique in Benin.</p>
-          <a class="case-link" href="project-electricity-access.html">View case study</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="case reveal">
-        <div class="case-index">05</div>
-        <div class="case-media">
-          <a class="frame thumb-seedly" href="project-seedly.html" aria-label="View Seedly case study">
+      <a class="case hm-row reveal" href="project-seedly.html" aria-label="View Seedly case study">
+        <div class="hm-text">
+          <span class="case-index">05</span>
+          <div>
+            <span class="case-tag">UX Researcher, UX Designer</span>
+            <h3><span class="hm-hl">Seedly</span></h3>
+            <p>Seedly turns climate awareness into everyday action by helping users build sustainable habits. It replaces abstract data with a growing digital garden that visualizes impact, making progress tangible and motivating continued engagement.</p>
+            <div class="hm-more">View case study <span class="arr">→</span></div>
+          </div>
+        </div>
+        <div class="case-media hm-thumb" style="--rot:1.2deg;">
+          <div class="hm-tilt"><div class="frame thumb-seedly">
             <svg class="thumb-illustration" viewBox="0 0 200 150" aria-hidden="true">
               <g class="thumb-scroll">
                 <g class="thumb-sun">
@@ -175,67 +205,61 @@
                 </g>
               </g>
             </svg>
-          </a>
+          </div></div>
+          <span class="hm-tape" style="--tape:-4deg;"></span>
+          <div class="hm-note" aria-hidden="true">Habits</div>
         </div>
-        <div class="case-body">
-          <span class="case-tag">UX Researcher, UX Designer</span>
-          <h3>Seedly</h3>
-          <p>Seedly turns climate awareness into everyday action by helping users build sustainable habits. It replaces abstract data with a growing digital garden that visualizes impact, making progress tangible and motivating continued engagement.</p>
-          <a class="case-link" href="project-seedly.html">View case study</a>
-        </div>
-      </article>
+      </a>
 
     </div>
   </section>
 
-  <section class="section" id="skills">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Skills</h2>
-        <div class="rule"></div>
-      </div>
-      <div class="skills-list">
-        <span class="skill-pill reveal">UX Design</span>
-        <span class="skill-pill reveal">UI Design</span>
-        <span class="skill-pill reveal">Product Design</span>
-        <span class="skill-pill reveal">UX Research</span>
-        <span class="skill-pill reveal">Interaction Design</span>
-        <span class="skill-pill reveal">User Testing</span>
-        <span class="skill-pill reveal">Usability Testing</span>
-        <span class="skill-pill reveal">Leadership</span>
-        <span class="skill-pill reveal">Design Systems</span>
-        <span class="skill-pill reveal">+ More</span>
+  <section class="hm-skills" id="skills" data-reveal>
+    <div class="hm-skills-in">
+      <div class="hm-label">Skills</div>
+      <div class="hm-pills">
+        <span class="hm-pill" style="--i:0; --r:-1deg;">UX Design</span>
+        <span class="hm-pill" style="--i:1; --r:1deg;">UI Design</span>
+        <span class="hm-pill" style="--i:2; --r:0deg;">Product Design</span>
+        <span class="hm-pill" style="--i:3; --r:-2deg;">UX Research</span>
+        <span class="hm-pill" style="--i:4; --r:1deg;">Interaction Design</span>
+        <span class="hm-pill" style="--i:5; --r:2deg;">User Testing</span>
+        <span class="hm-pill" style="--i:6; --r:-1deg;">Usability Testing</span>
+        <span class="hm-pill" style="--i:7; --r:0deg;">Leadership</span>
+        <span class="hm-pill" style="--i:8; --r:1deg;">Design Systems</span>
+        <span class="hm-pill" style="--i:9; --r:-1deg;">+ More</span>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-photo reveal">
-        <div class="frame">
-          <img src="https://framerusercontent.com/images/mZ1WjmFvYRBUnL27Hdy6PQY.jpeg?width=1104&height=712" alt="Photo of Sheena Vaghela">
-        </div>
-      </div>
-      <div class="about-body reveal">
-        <div class="section-head" style="margin-bottom:20px;">
-          <h2>More about me</h2>
-        </div>
-        <p>I'm a UX designer and researcher who loves simplifying complex ideas. I'm especially interested in how people think, make decisions, and interact with systems, and I enjoy turning those insights into experiences that feel natural, clear, and impactful.</p>
-        <p>I've worked on projects ranging from improving access to public services to helping students discover and engage with campus organizations. I combine user insights and iterative prototyping to solve real-world problems, designing with attention to behavior, trust, and balancing user needs with feasibility and impact while collaborating with teams that care about the "why" as much as the "how."</p>
-        <p>Outside of design, I enjoy playing tennis, traveling, hiking, going on runs, and trying new cafes/restaurants. I also love drawing, tackling jigsaw puzzles, and experimenting with new hobbies whenever I can.</p>
-      </div>
+  <section class="hm-about" id="about">
+    <figure class="hm-polaroid" data-reveal>
+      <span class="hm-tape"></span>
+      <img src="https://framerusercontent.com/images/mZ1WjmFvYRBUnL27Hdy6PQY.jpeg?width=1104&height=712" alt="Photo of Sheena Vaghela">
+      <figcaption>Sheena Vaghela</figcaption>
+    </figure>
+    <div class="hm-about-body">
+      <h2 class="hm-h2">More about me</h2>
+      <p>I'm a UX designer and researcher who loves simplifying complex ideas. I'm especially interested in how people think, make decisions, and interact with systems, and I enjoy turning those insights into experiences that feel natural, clear, and impactful.</p>
+      <p>I've worked on projects ranging from improving access to public services to helping students discover and engage with campus organizations. I combine user insights and iterative prototyping to solve real-world problems, designing with attention to behavior, trust, and balancing user needs with feasibility and impact while collaborating with teams that care about the "why" as much as the "how."</p>
+      <p>Outside of design, I enjoy playing tennis, traveling, hiking, going on runs, and trying new cafes/restaurants. I also love drawing, tackling jigsaw puzzles, and experimenting with new hobbies whenever I can.</p>
     </div>
   </section>
 
 </main>
 
-<footer>
-  <div class="wrap foot-row">
+<footer class="hm-foot">
+  <div class="hm-foot-in">
     <span>© 2026 Sheena Vaghela</span>
-    <span><a href="https://www.linkedin.com/in/sheena-vaghela" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="resume-sheena-vaghela.pdf" target="_blank" rel="noopener">Resume</a></span>
+    <div class="hm-foot-links">
+      <a href="https://www.linkedin.com/in/sheena-vaghela" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume-sheena-vaghela.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
   </div>
 </footer>
 
+</div>
 <script src="script.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
