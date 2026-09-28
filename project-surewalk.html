@@ -89,11 +89,94 @@
       <div class="process-block">
         <h3>Grounding Design in Rider and Staff Needs</h3>
         <p>By engaging UT students alongside current and former Sure Walk staff, including riders, drivers, navigators, dispatchers, and non-users, we identified early breakdowns in awareness and usability that were affecting how people accessed and coordinated the service. These insights surfaced consistent confusion around how requests were submitted and tracked, especially through the Google Form system. This directly shaped our decision to prioritize clarity in request flow and end-to-end visibility across roles, rather than focusing on isolated UI improvements.</p>
+        <div class="stat-row">
+          <div class="stat-card">
+            <span class="stat-num">5</span>
+            <p>user groups represented: riders, drivers, navigators, dispatchers, and students who had never used Sure Walk.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2</span>
+            <p>perspectives surveyed side by side: UT students and current or former Sure Walk staff.</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">4</span>
+            <p>recurring breakdown themes surfaced: awareness, communication, workflow coordination, and service transparency.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Mapping Needs Across Every Role</h3>
+        <p>Because a single ride depends on several people doing their part, we looked at what each role needed from the system rather than designing for riders alone. This kept us from solving one group's problem by creating a new one for another.</p>
+        <div class="persona-grid persona-grid-2">
+          <div class="persona-card">
+            <h4>Riders</h4>
+            <p>Need confirmation that their request went through, an honest sense of when pickup will happen, and a heads-up before anything changes.</p>
+          </div>
+          <div class="persona-card">
+            <h4>Drivers &amp; Navigators</h4>
+            <p>Need accurate pickup details and a reliable way to reach riders, so a missed connection doesn't turn into a cancelled ride.</p>
+          </div>
+          <div class="persona-card">
+            <h4>Dispatchers</h4>
+            <p>Need one shared view of incoming requests and ride status, without relaying information through side channels.</p>
+          </div>
+          <div class="persona-card">
+            <h4>Non-Users</h4>
+            <p>Need to know Sure Walk exists, who it's for, and how to request a ride before they're in a moment where they need one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Tracing Today's Rider Journey</h3>
+        <p>We walked through the current Google Form experience step by step to pinpoint where riders lose visibility. The biggest gaps weren't in submitting a request, but in everything that happens after.</p>
+        <span class="journey-row-label">Current experience, via Google Form</span>
+        <div class="journey-steps journey-before">
+          <div class="journey-step">
+            <span class="step-num">1</span>
+            <p><strong>Find the form</strong>Riders have to know the service exists and track down the link.</p>
+          </div>
+          <div class="journey-step">
+            <span class="step-num">2</span>
+            <p><strong>Submit a request</strong>Details go into a generic form with no ride-specific guidance.</p>
+          </div>
+          <div class="journey-step">
+            <span class="step-num">3</span>
+            <p><strong>Wait blind</strong>No live status or pickup estimate once the form is sent.</p>
+          </div>
+          <div class="journey-step">
+            <span class="step-num">4</span>
+            <p><strong>Miss the window</strong>If the rider isn't out within two minutes, the ride can be cancelled with no notice.</p>
+          </div>
+        </div>
       </div>
 
       <div class="process-block">
         <h3>Uncovering Systemic Issues Across the Service</h3>
         <p>Through affinity diagramming, we synthesized responses from all user groups and uncovered recurring breakdowns in communication, workflow coordination, and service transparency. This revealed a trust gap in the system's feedback loop, specifically around wait time transparency. It directly influenced our decision to prioritize real-time wait-time visibility and clearer status updates, ensuring riders could understand not just whether their request was received, but when they could actually expect pickup.</p>
+        <div class="affinity-map">
+          <div class="affinity-col">
+            <h4>Awareness</h4>
+            <div class="affinity-note">Many students don't know Sure Walk exists</div>
+            <div class="affinity-note">Unclear who can use it and when</div>
+          </div>
+          <div class="affinity-col">
+            <h4>Communication</h4>
+            <div class="affinity-note">No notification when a ride is cancelled</div>
+            <div class="affinity-note">Hard for riders and drivers to reach each other</div>
+          </div>
+          <div class="affinity-col">
+            <h4>Workflow Coordination</h4>
+            <div class="affinity-note">Staff coordinate through side channels</div>
+            <div class="affinity-note">Request details scattered across tools</div>
+          </div>
+          <div class="affinity-col">
+            <h4>Service Transparency</h4>
+            <div class="affinity-note">No way to see estimated wait time</div>
+            <div class="affinity-note">Riders can't tell if a request was received</div>
+          </div>
+        </div>
         <div class="quote-grid">
           <div class="quote-card">
             <p>No idea when the driver will arrive.</p>
@@ -121,6 +204,17 @@
             <p>Help dispatchers and drivers coordinate without relying on side channels?</p>
           </div>
         </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Connecting Insights to Design Priorities</h3>
+        <p>Each priority traces back to a specific finding, which gave the team a shared rationale when deciding what to build first.</p>
+        <ul class="conclusion-list">
+          <li><strong>Riders couldn't tell when pickup would happen</strong> → real-time wait estimates and ride status.</li>
+          <li><strong>Requests were cancelled without warning</strong> → proactive notifications before and after a ride changes.</li>
+          <li><strong>Staff relied on side channels</strong> → a shared request view connecting dispatchers, drivers, and navigators.</li>
+          <li><strong>Many students had never heard of the service</strong> → a clear, discoverable entry point in place of a buried form link.</li>
+        </ul>
       </div>
 
       <div class="process-block">
