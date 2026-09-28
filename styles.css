@@ -422,6 +422,71 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 @media (max-width:800px){ .affinity-map{ grid-template-columns:1fr 1fr; } }
 @media (max-width:480px){ .affinity-map{ grid-template-columns:1fr; } }
 
+/* ---------- HOW MIGHT WE cards ---------- */
+.hmw-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:24px 0 4px; }
+.hmw-card{
+  background:var(--moss-dark); border-radius:10px; padding:20px 20px 22px; color:var(--paper);
+}
+.hmw-card .hmw-tag{
+  display:block; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;
+  color:var(--paper); opacity:0.7; margin-bottom:8px;
+}
+.hmw-card p{ margin:0; font-size:15px; line-height:1.4; color:var(--paper); max-width:none; }
+@media (max-width:800px){ .hmw-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .hmw-grid{ grid-template-columns:1fr; } }
+
+/* ---------- STAT highlights ---------- */
+.stat-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:24px 0 4px; }
+.stat-card{
+  background:var(--paper-alt); border:1px solid var(--line); border-radius:10px; padding:20px 18px;
+}
+.stat-card .stat-num{
+  display:block; font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:clamp(26px,3vw,34px);
+  color:var(--moss-dark); letter-spacing:-0.02em; line-height:1;
+}
+.stat-card p{ margin:10px 0 0; font-size:13.5px; line-height:1.4; color:var(--ink-soft); max-width:none; }
+@media (max-width:800px){ .stat-row{ grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .stat-row{ grid-template-columns:1fr; } }
+
+/* ---------- PERSONA / archetype cards ---------- */
+.persona-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:24px 0 4px; }
+.persona-card{
+  border:1px solid var(--line); border-radius:10px; padding:20px 20px 22px; position:relative;
+}
+.persona-card h4{
+  font-family:'Space Grotesk', sans-serif; font-size:15px; font-weight:600; color:var(--ink);
+  margin-bottom:8px; line-height:1.3;
+}
+.persona-card p{ margin:0; font-size:13.5px; line-height:1.5; color:var(--ink-soft); max-width:none; }
+@media (max-width:800px){ .persona-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .persona-grid{ grid-template-columns:1fr; } }
+
+/* ---------- JOURNEY steps (before / after) ---------- */
+.journey-steps{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:0; margin:24px 0 4px;
+  border:1px solid var(--line); border-radius:10px; overflow:hidden;
+}
+.journey-step{
+  padding:18px 16px; background:var(--paper); border-right:1px solid var(--line); position:relative;
+}
+.journey-step:last-child{ border-right:none; }
+.journey-step .step-num{
+  display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%;
+  background:var(--moss-dark); color:var(--paper); font-size:11px; font-weight:600; margin-bottom:10px;
+}
+.journey-step p{ margin:0; font-size:13px; line-height:1.4; color:var(--ink-soft); max-width:none; }
+.journey-step p strong{ display:block; color:var(--ink); font-size:13.5px; margin-bottom:3px; }
+.journey-row-label{
+  font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-soft);
+  margin-bottom:8px; display:block;
+}
+.journey-before .step-num{ background:var(--ink-soft); }
+@media (max-width:640px){
+  .journey-steps{ grid-template-columns:1fr; }
+  .journey-step{ border-right:none; border-bottom:1px solid var(--line); }
+  .journey-step:last-child{ border-bottom:none; }
+}
+
 /* ---------- SCROLLING SCREEN DEMO ---------- */
 .scroll-demo-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; padding:12px 0 8px; }
 .scroll-demo{
