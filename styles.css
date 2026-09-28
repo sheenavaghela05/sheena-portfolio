@@ -24,6 +24,7 @@ body{
   font-size:16px;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 
 h1,h2,h3,h4{
@@ -555,6 +556,13 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 
 @media (min-width:640px){
   .carousel-slide{ min-height:460px; }
+}
+
+/* breaks a single wide diagram out of the narrow text column so it's bigger and easier to read */
+.carousel.carousel-wide{
+  width:min(94vw, 1200px);
+  margin-left:50%;
+  transform:translateX(-50%);
 }
 
 .next-project{
