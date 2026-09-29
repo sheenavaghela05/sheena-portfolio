@@ -436,6 +436,31 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 @media (max-width:800px){ .hmw-grid{ grid-template-columns:1fr 1fr; } }
 @media (max-width:480px){ .hmw-grid{ grid-template-columns:1fr; } }
 
+/* ---------- SUMMARY block (top of each case study) ---------- */
+.summary-block{
+  margin:32px 0 0; padding:4px 24px; background:var(--card);
+  border:1px solid var(--line); border-radius:12px;
+}
+.summary-row{
+  display:grid; grid-template-columns:128px minmax(0,1fr); gap:6px 20px;
+  padding:14px 0; border-top:1px solid var(--line); margin:0;
+}
+.summary-row:first-child{ border-top:none; }
+.summary-row dt{
+  font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--moss-dark);
+  font-weight:600; padding-top:3px;
+}
+.summary-row dd{ margin:0; font-size:14.5px; line-height:1.55; color:var(--ink); }
+.summary-row dd .metric-note{ display:block; font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+@media (max-width:560px){
+  .summary-block{ padding:4px 18px; }
+  .summary-row{ grid-template-columns:1fr; }
+}
+
+.quote-card .quote-source{
+  display:block; margin-top:10px; font-size:12.5px; font-style:normal; color:var(--ink-soft);
+}
+
 /* ---------- STAT highlights ---------- */
 .stat-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:24px 0 4px; }
 .stat-card{
@@ -522,6 +547,7 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   color:var(--moss-dark); border-bottom:1px solid var(--moss-dark); text-transform:uppercase; letter-spacing:0.04em;
 }
 .proto-link:hover{ color:var(--ink); border-color:var(--ink); }
+.proto-link + .proto-link{ margin-left:24px; }
 
 /* ---------- CAROUSEL ---------- */
 .carousel{ position:relative; }
@@ -584,4 +610,11 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   .nav-links{ gap:14px; font-size:11px; }
   .wrap, .wrap-narrow{ padding:0 20px; }
   .meta-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* keep the name on one line on small phones now that the nav has four links */
+@media (max-width:420px){
+  .nav{ padding:18px 16px; gap:12px; }
+  .nav-name{ white-space:nowrap; font-size:16px; }
+  .nav-links{ gap:10px; font-size:10.5px; letter-spacing:0.05em; }
 }

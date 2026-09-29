@@ -15,6 +15,7 @@
     <div class="nav-links">
       <a href="index.html#about">About</a>
       <a href="resume-sheena-vaghela.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="mailto:sheenavaghela@utexas.edu">Email</a>
       <a class="btn" href="https://www.linkedin.com/in/sheena-vaghela" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -49,7 +50,15 @@
           </div>
         </div>
       </div>
-      <div class="award-note reveal in">🔄 Project ongoing — currently iterating on the first round of high-fidelity designs</div>
+      <div class="award-note reveal in">🔄 Project ongoing: the app hasn’t launched yet. We’re building an admin dashboard for Sure Walk staff now, with a goal of launching by the end of the Fall 2026 semester.</div>
+      <dl class="summary-block reveal in">
+        <div class="summary-row"><dt>Problem</dt><dd>Sure Walk’s late-night rides are requested through a Google Form that gives riders no confirmation, no pickup estimate, and no warning before a ride is cancelled.</dd></div>
+        <div class="summary-row"><dt>My role</dt><dd>I designed and iterated on the ride-request and safety workflows, and redesigned onboarding and core UI flows.</dd></div>
+        <div class="summary-row"><dt>What I did</dt><dd>A survey of UT students and Sure Walk staff (32 responses) · 7 interviews with riders, drivers, navigators, and staff · a Service Safari, booking real rides ourselves · dispatcher shift observations · affinity mapping · “How might we” framing · sketches and low-fi wireframes · user interviews and cohort analysis · usability tests with 3 sponsored users</dd></div>
+        <div class="summary-row"><dt>Key decision</dt><dd>Design the rider experience first, built around real-time wait times and ride status, because riders not knowing when pickup would happen was the biggest trust gap in the research.</dd></div>
+        <div class="summary-row"><dt>Outcome</dt><dd>Not launched yet. We tested the first round of high-fidelity rider designs with 3 sponsored users, and we’re now designing an admin dashboard for Sure Walk staff, with a goal of launching by the end of the Fall 2026 semester. The research moved the team’s priorities to real-time wait-time visibility and clearer status updates.</dd></div>
+        <div class="summary-row"><dt>Success metrics</dt><dd>Time to pickup · cancellation rate (especially no-show cancellations) · request completion rate<span class="metric-note">Metrics we defined to measure success, not results achieved yet.</span></dd></div>
+      </dl>
     </div>
   </section>
 
@@ -75,16 +84,29 @@
 
     <section class="content-section reveal">
       <h2>Challenge</h2>
-      <p>The Sure Walk experience involves multiple parties, from riders, drivers, navigators, and dispatchers, each with different goals and pain points. The challenge was to understand where friction occurred across these roles, particularly in areas such as awareness, communication, and task flow, and to prioritize features that would meaningfully improve safety, usability, and operational efficiency within a single app experience.</p>
+      <p>The Sure Walk experience involves multiple parties, from riders, drivers, navigators, and dispatchers, each with different goals and pain points. The challenge was to understand where friction occurred across these roles, particularly in areas such as awareness, communication, and task flow, and to prioritize features that would meaningfully improve safety, usability, and operational efficiency within a single app experience. The stakes rise with demand: on rainy nights Sure Walk can get 200–300 ride requests, all coordinated by dispatchers through a Google Sheet and a group chat.</p>
     </section>
 
     <section class="content-section reveal">
-      <h2>Results</h2>
-      <p>We surveyed UT students and current or former Sure Walk staff to understand usage patterns, awareness, and pain points across roles. Using affinity diagramming, we synthesized insights and developed "How might we" questions to guide feature prioritization. These insights informed early sketches and low-fidelity wireframes, and the team is currently iterating on the first round of high-fidelity designs.</p>
+      <h2>Outcome</h2>
+      <p>The project is ongoing and the app hasn’t launched yet. We’ve tested the first round of high-fidelity rider designs with 3 sponsored users, and we’re now working on an admin dashboard for Sure Walk staff, with a goal of launching by the end of the Fall 2026 semester. So far, the research has changed what we’re building first. Instead of polishing the existing request form, we’re focusing on real-time wait-time visibility and clearer status updates, so riders know their request was received and when to expect pickup.</p>
+      <p>Research scope: a survey of UT students and Sure Walk staff (32 responses), 7 interviews with riders, drivers, navigators, and staff, a Service Safari where our team booked and rode Sure Walk ourselves, observations of dispatchers during live shifts, and usability tests with 3 sponsored users.</p>
+    </section>
+
+    <section class="content-section reveal">
+      <h2>My contributions</h2>
+      <ul class="conclusion-list">
+        <li>Redesigned the ride-request and safety workflows, iterating through usability tests with 3 sponsored users</li>
+        <li>Redesigned onboarding and core UI flows, informed by user interviews and cohort analysis that surfaced friction points</li>
+        <li>Partnered with engineers on implementation, documenting specs, interaction states, and edge cases</li>
+        <li>Observed dispatchers during live shifts to understand how rides are confirmed, grouped, and assigned</li>
+        <li>Currently writing the ride-status notifications (rider assigned, on the way, arrived, with a pickup time warning) and creating a tone-of-voice guide for Sure Walk’s app copy</li>
+      </ul>
     </section>
 
     <section class="content-section reveal">
       <h2>Process</h2>
+      <p>We surveyed UT students and current or former Sure Walk staff to understand usage patterns, awareness, and pain points across roles. Using affinity diagramming, we synthesized insights and developed “How might we” questions to guide feature prioritization. These insights informed early sketches and low-fidelity wireframes.</p>
 
       <div class="process-block">
         <h3>Grounding Design in Rider and Staff Needs</h3>
@@ -95,8 +117,8 @@
             <p>user groups represented: riders, drivers, navigators, dispatchers, and students who had never used Sure Walk.</p>
           </div>
           <div class="stat-card">
-            <span class="stat-num">2</span>
-            <p>perspectives surveyed side by side: UT students and current or former Sure Walk staff.</p>
+            <span class="stat-num">7</span>
+            <p>interviews with riders, drivers, navigators, and Sure Walk staff, alongside a survey and live dispatcher observations.</p>
           </div>
           <div class="stat-card">
             <span class="stat-num">4</span>
@@ -180,9 +202,11 @@
         <div class="quote-grid">
           <div class="quote-card">
             <p>No idea when the driver will arrive.</p>
+            <span class="quote-source">— Sure Walk rider</span>
           </div>
           <div class="quote-card">
             <p>My request got cancelled with no notification because I didn't show up within two minutes.</p>
+            <span class="quote-source">— Sure Walk rider</span>
           </div>
         </div>
       </div>
@@ -224,20 +248,30 @@
 
       <div class="process-block">
         <h3>Refining Flows and Visuals Toward High-Fidelity Designs</h3>
-        <p>The project is ongoing. We are currently iterating on flows and visual direction as we develop the first wave of high-fidelity designs informed by earlier research findings.</p>
+        <p>The project is ongoing. We tested the first wave of high-fidelity designs with 3 sponsored users, and we’re currently iterating on flows and visual direction based on what we learned.</p>
       </div>
     </section>
 
     <section class="content-section reveal">
+      <h2>Prioritization &amp; tradeoffs</h2>
+      <ul class="conclusion-list">
+        <li><strong>Built first:</strong> the rider flow (requesting a ride, seeing the wait time, and getting status updates), because that’s where the research showed trust breaking down.</li>
+        <li><strong>Next:</strong> an admin dashboard for Sure Walk staff, which we’re designing now that the rider side has been tested. We mapped staff needs early so the dashboard builds on that research.</li>
+        <li><strong>Why:</strong> Parking &amp; Transportation Services, our client, made the rider experience its main focus, and riders were the group feeling the most visible pain in our research.</li>
+        <li><strong>Working with engineering:</strong> I partnered with engineers to document specs, interaction states, and edge cases, and adjusted designs to fit technical constraints.</li>
+      </ul>
+    </section>
+
+    <section class="content-section reveal">
       <h2>Conclusion</h2>
-      <p>This project highlighted the value of multi-stakeholder research for safety-critical services like Sure Walk. By engaging both riders and employees, we uncovered shared and role-specific pain points that helped ground design decisions in real operational needs. While the project is still in progress, these insights have directly informed our current focus on designing the rider side of the experience. This research-driven foundation positions the team to continue iterating with clarity and confidence as the design expands to support additional user roles.</p>
+      <p>This project highlighted the value of multi-stakeholder research for safety-critical services like Sure Walk. By engaging both riders and employees, we uncovered shared and role-specific pain points that helped ground design decisions in real operational needs. The app hasn’t launched yet, but these insights shaped the rider experience we’ve tested and now the staff admin dashboard we’re designing. Our goal is to launch by the end of the Fall 2026 semester.</p>
     </section>
 
   </div>
 
   <section class="next-project reveal">
-    <div class="label">Next project</div>
-    <h2><a href="project-herdup.html">HerdUp App →</a></h2>
+    <div class="label">Back to</div>
+    <h2><a href="index.html#work">All work →</a></h2>
   </section>
 
 </main>
@@ -245,7 +279,7 @@
 <footer>
   <div class="wrap foot-row">
     <span>© 2026 Sheena Vaghela</span>
-    <span><a href="https://www.linkedin.com/in/sheena-vaghela" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="resume-sheena-vaghela.pdf" target="_blank" rel="noopener">Resume</a></span>
+    <span><a href="https://www.linkedin.com/in/sheena-vaghela" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="resume-sheena-vaghela.pdf" target="_blank" rel="noopener">Resume</a> &nbsp;·&nbsp; <a href="mailto:sheenavaghela@utexas.edu">Email</a></span>
   </div>
 </footer>
 

@@ -45,8 +45,8 @@
   margin:0; color:var(--ink);
 }
 .hm-hero h1 .ln{ display:block; }
-.hm-hero h1 .w{ display:inline-block; margin-right:.24em; transform-origin:50% 90%; }
-.hm-hero h1 .w.tight{ margin-right:0; }
+/* words are separated by real spaces in the markup, so no margin is needed */
+.hm-hero h1 .w{ display:inline-block; transform-origin:50% 90%; }
 .hm-hero h1 .w.name{ font-family:'Caveat Brush', cursive; font-weight:400; font-size:1.08em; letter-spacing:0; color:var(--moss-dark); }
 .hm-hero h1 .w.key{ color:var(--ink); }
 .hm-intro{
@@ -112,6 +112,17 @@
   -webkit-box-decoration-break:clone; box-decoration-break:clone;
 }
 .home .hm-row p{ margin:0; font-size:16px; line-height:1.55; color:var(--ink-soft); max-width:600px; text-wrap:pretty; }
+.home .hm-row p.hm-proof{
+  margin-top:12px; font-size:13px; letter-spacing:.04em; color:var(--moss-dark); font-weight:500;
+}
+.home .hm-row p.hm-nda{ margin-top:10px; font-size:14px; color:var(--ink-soft); }
+.hm-nda a{ position:relative; z-index:3; color:var(--moss-dark); border-bottom:1px solid var(--moss-dark); }
+.hm-nda a:hover{ color:var(--ink); border-color:var(--ink); }
+/* card that holds a second link: the title link stretches over the whole row */
+.hm-row-stretch{ cursor:pointer; }
+.hm-stretch::after{ content:""; position:absolute; inset:0; z-index:1; }
+.hm-stretch:focus-visible{ outline:none; }
+.hm-stretch:focus-visible::after{ outline:2px solid var(--moss-dark); outline-offset:4px; border-radius:12px; }
 .hm-more{ margin-top:16px; font-size:14px; font-weight:500; display:flex; gap:8px; align-items:center; }
 .hm-more .arr{ color:var(--moss-dark); transition:transform .3s ease; }
 
@@ -159,6 +170,7 @@
   color:var(--moss-dark); margin-bottom:20px;
 }
 .hm-pills{ display:flex; flex-wrap:wrap; gap:10px; }
+.hm-skill-group + .hm-skill-group{ margin-top:32px; }
 .hm-pill{
   display:inline-block; padding:10px 18px; border:1px solid #CBD8BF; border-radius:999px;
   font-size:15px; line-height:1.65; background:var(--paper); color:var(--moss-dark);
