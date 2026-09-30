@@ -5,11 +5,38 @@
   var canObserve = 'IntersectionObserver' in window;
   var loaded = false;
 
-  setTimeout(function () {
+  function start() {
     loaded = true;
     body.classList.add('is-loaded');
     if (hero) hero.classList.add('hero-in');
-  }, 60);
+  }
+
+  // intro title card: plays once per session, then hands off to the hero animation
+  var intro = document.getElementById('intro');
+  var root = document.documentElement;
+  if (intro && !root.classList.contains('no-intro')) {
+    var finished = false;
+    var finish = function () {
+      if (finished) return;
+      finished = true;
+      intro.classList.add('exit');
+      try { sessionStorage.setItem('introSeen', '1'); } catch (err) {}
+      setTimeout(function () {
+        root.classList.add('no-intro');
+        intro.remove();
+      }, 850);
+      setTimeout(start, 350);
+    };
+    void intro.offsetWidth; // commit the starting state so the transitions run
+    setTimeout(function () { intro.classList.add('play'); }, 30);
+    var timer = setTimeout(finish, 2600);
+    var skip = function () { clearTimeout(timer); finish(); };
+    intro.addEventListener('click', skip);
+    document.addEventListener('keydown', skip, { once: true });
+  } else {
+    if (intro) intro.remove();
+    setTimeout(start, 60);
+  }
 
   if (!canObserve || reduce) {
     document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-visible'); });
