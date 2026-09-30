@@ -80,3 +80,47 @@ function initRevealAndCarousels(root) {
 
 window.initRevealAndCarousels = initRevealAndCarousels;
 initRevealAndCarousels(document);
+
+// mailto links do nothing for visitors without a desktop mail app, so also copy the address
+function showEmailToast(message) {
+  let toast = document.querySelector('.email-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'email-toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toast._hide);
+  toast._hide = setTimeout(() => toast.classList.remove('show'), 3200);
+}
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text).then(() => true, () => legacyCopy(text));
+  }
+  return Promise.resolve(legacyCopy(text));
+}
+
+function legacyCopy(text) {
+  const area = document.createElement('textarea');
+  area.value = text;
+  area.setAttribute('readonly', '');
+  area.style.cssText = 'position:fixed; opacity:0; pointer-events:none;';
+  document.body.appendChild(area);
+  area.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+  area.remove();
+  return ok;
+}
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="mailto:"]');
+  if (!link) return;
+  const address = link.getAttribute('href').slice(7);
+  copyText(address).then((copied) => {
+    showEmailToast(copied ? 'Email copied: ' + address : 'Email: ' + address);
+  });
+});
