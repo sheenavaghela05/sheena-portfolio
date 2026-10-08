@@ -26,7 +26,7 @@
   <section class="detail-hero">
     <div class="wrap-narrow">
       <a class="back-link reveal in" href="index.html#work"><span class="arrow">→</span> Back to all work</a>
-      <span class="case-tag reveal in">UX Researcher, UX Designer</span>
+      <span class="case-tag reveal in">UX Researcher, UX Designer, Content Writer</span>
       <h1 class="reveal in" style="margin-top:14px;">Sure Walk App</h1>
       <p class="intro reveal in">Sure Walk is a student-run safety service at the University of Texas at Austin that provides late-night rides to help students, faculty, and staff get home safely. Currently, the service is requested through a Google Form rather than a dedicated app. Our team explored how a mobile app could better support the Sure Walk experience by addressing usability, communication, and coordination challenges for both riders and employees.</p>
 
@@ -41,7 +41,7 @@
         </div>
         <div class="meta-item">
           <div class="label">Role</div>
-          <div class="value">UX Researcher, UX Designer</div>
+          <div class="value">UX Researcher, UX Designer, Content Writer</div>
         </div>
         <div class="meta-item">
           <div class="label">Team</div>
@@ -53,7 +53,7 @@
       <div class="award-note reveal in">🔄 Project ongoing: the app hasn’t launched yet. We’re building an admin dashboard for Sure Walk staff now, with a goal of launching by the end of the Fall 2026 semester.</div>
       <dl class="summary-block reveal in">
         <div class="summary-row"><dt>Problem</dt><dd>Sure Walk’s late-night rides are requested through a Google Form that gives riders no confirmation, no pickup estimate, and no warning before a ride is cancelled.</dd></div>
-        <div class="summary-row"><dt>My role</dt><dd>I designed and iterated on the ride-request and safety workflows, and redesigned onboarding and core UI flows.</dd></div>
+        <div class="summary-row"><dt>My role</dt><dd>I designed and iterated on the ride-request and safety workflows, and redesigned onboarding and core UI flows. I also wrote Sure Walk’s tone-of-voice guide for app copy.</dd></div>
         <div class="summary-row"><dt>What I did</dt><dd>A survey of UT students and Sure Walk staff (32 responses) · 7 interviews with riders, drivers, navigators, and staff · a Service Safari, booking real rides ourselves · dispatcher shift observations · affinity mapping · “How might we” framing · sketches and low-fi wireframes · user interviews and cohort analysis · usability tests with 3 sponsored users</dd></div>
         <div class="summary-row"><dt>Key decision</dt><dd>Design the rider experience first, built around real-time wait times and ride status, because riders not knowing when pickup would happen was the biggest trust gap in the research.</dd></div>
         <div class="summary-row"><dt>Outcome</dt><dd>Not launched yet. We tested the first round of high-fidelity rider designs with 3 sponsored users, and we’re now designing an admin dashboard for Sure Walk staff, with a goal of launching by the end of the Fall 2026 semester. The research moved the team’s priorities to real-time wait-time visibility and clearer status updates.</dd></div>
@@ -100,7 +100,7 @@
         <li>Redesigned onboarding and core UI flows, informed by user interviews and cohort analysis that surfaced friction points</li>
         <li>Partnered with engineers on implementation, documenting specs, interaction states, and edge cases</li>
         <li>Observed dispatchers during live shifts to understand how rides are confirmed, grouped, and assigned</li>
-        <li>Currently writing the ride-status notifications (rider assigned, on the way, arrived, with a pickup time warning) and creating a tone-of-voice guide for Sure Walk’s app copy</li>
+        <li>Wrote Sure Walk’s tone-of-voice guide for app copy, and am applying it to the ride-status notifications (rider assigned, on the way, arrived, with a pickup time warning)</li>
       </ul>
     </section>
 
@@ -249,6 +249,80 @@
       <div class="process-block">
         <h3>Refining Flows and Visuals Toward High-Fidelity Designs</h3>
         <p>The project is ongoing. We tested the first wave of high-fidelity designs with 3 sponsored users, and we’re currently iterating on flows and visual direction based on what we learned.</p>
+      </div>
+    </section>
+
+    <section class="content-section reveal">
+      <h2>Content writing: the Sure Walk voice</h2>
+      <p>Riders open Sure Walk late at night, often alone, and often anxious. The research showed that the biggest trust gap wasn’t a missing feature, it was silence: riders had “no idea when the driver will arrive,” and one rider’s request was cancelled without any notification. I wrote a tone-of-voice guide so every message in the app closes that gap by telling riders what is happening and what happens next.</p>
+
+      <div class="process-block">
+        <h3>Three Voice Principles</h3>
+        <div class="persona-grid">
+          <div class="persona-card">
+            <h4>Transparent</h4>
+            <p>Always explain changes, including cancellations, and tell riders about the next step in the ride early.</p>
+          </div>
+          <div class="persona-card">
+            <h4>Clear</h4>
+            <p>Give real time estimates instead of vague updates, so riders know how long they’ll wait.</p>
+          </div>
+          <div class="persona-card">
+            <h4>Calm, not alarming</h4>
+            <p>State facts steadily, even when a ride is delayed or cancelled.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Adjusting Tone to Each Moment of the Ride</h3>
+        <p>The voice stays the same, but the tone shifts with what the rider is going through. Each moment has its own goal.</p>
+        <div class="voice-moments">
+          <div class="voice-moment">
+            <span class="voice-label">Requesting<em>Brief but guided</em></span>
+            <p class="voice-msg">Where are you headed?</p>
+          </div>
+          <div class="voice-moment">
+            <span class="voice-label">Waiting<em>Specific, reassuring, time-bound</em></span>
+            <p class="voice-msg">Your ride is estimated to arrive in 7 minutes.</p>
+          </div>
+          <div class="voice-moment">
+            <span class="voice-label">Arrival<em>Straightforward, time-bound</em></span>
+            <p class="voice-msg">Your driver has arrived, you have 2 minutes.</p>
+          </div>
+          <div class="voice-moment">
+            <span class="voice-label">Cancellation<em>Direct and honest</em></span>
+            <p class="voice-msg">Your ride was cancelled. Would you like to request another ride?</p>
+          </div>
+          <div class="voice-moment">
+            <span class="voice-label">After hours<em>Straightforward and guided</em></span>
+            <p class="voice-msg">The service is currently unavailable as it is outside of hours. We open at [time] today.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Choosing Words Riders Already Know</h3>
+        <p>I aligned terminology with Parking &amp; Transportation Services’ existing materials where it helped, and swapped in plainer words where it didn’t, so the app reads easily on a phone screen.</p>
+        <div class="term-table">
+          <div class="term-row term-head"><span>Use</span><span>Avoid</span><span>Why</span></div>
+          <div class="term-row"><span>Sure Walk</span><span>SURE Walk, Surewalk, SureWalk</span><span>Matches how PTS writes the name today.</span></div>
+          <div class="term-row"><span>Request</span><span>Book, order, reserve, schedule</span><span>Matches PTS’s wording, and is honest that rides are on demand, not guaranteed for a set time.</span></div>
+          <div class="term-row"><span>Free</span><span>Complimentary, no-cost</span><span>PTS says “complimentary,” but “free” is easier to read on a phone.</span></div>
+          <div class="term-row"><span>Pickup, drop-off</span><span>Origin, destination, location A/B</span><span>Plain language that matches the ride apps students already use.</span></div>
+          <div class="term-row"><span>Wait time</span><span>ETA, queue time</span><span>Plain language, always framed as an estimate.</span></div>
+        </div>
+      </div>
+
+      <div class="process-block">
+        <h3>Writing Rules for Consistency</h3>
+        <ul class="conclusion-list">
+          <li><strong>Active voice, present tense:</strong> “Your driver is on the way.”</li>
+          <li><strong>Buttons start with a verb,</strong> use sentence case, and have no punctuation: “Request a ride.”</li>
+          <li><strong>Times are consistent:</strong> “12:30 a.m.” for clock times, “8 min” for waits, and estimates are always labeled as estimates.</li>
+          <li><strong>No exclamation points or emoji</strong> in status or safety messages.</li>
+          <li><strong>Errors say what happened, then what to do,</strong> and never blame the rider.</li>
+        </ul>
       </div>
     </section>
 
