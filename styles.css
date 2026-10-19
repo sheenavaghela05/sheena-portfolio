@@ -389,7 +389,7 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
 }
 .conclusion-list li:last-child{ border-bottom:1px solid var(--line); }
 .conclusion-list li::before{
-  content:"—"; position:absolute; left:0; color:var(--moss-dark); font-size:14px;
+  content:"–"; position:absolute; left:0; color:var(--moss-dark); font-size:14px;
 }
 .conclusion-list li strong{ color:var(--ink); }
 
