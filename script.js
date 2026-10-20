@@ -125,17 +125,57 @@ document.addEventListener('click', (e) => {
   });
 });
 
-// Prototype flow demos: cycle through each phone's screens
+// Prototype flow demos: a cursor taps through each phone's screens
 (function () {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  const cursorSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5 L4 19.5 L8.6 15.2 L11.6 21.8 L14.6 20.4 L11.7 13.9 L18 13.9 Z" fill="#14181f" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+
   document.querySelectorAll('[data-proto-demo]').forEach((phone) => {
     const screens = Array.from(phone.querySelectorAll('img'));
     if (reduce || screens.length < 2) return;
+
+    const cursor = document.createElement('span');
+    cursor.className = 'proto-cursor';
+    cursor.innerHTML = cursorSvg;
+    phone.appendChild(cursor);
+    const moveTo = (x, y) => { cursor.style.left = x + '%'; cursor.style.top = y + '%'; };
+    const press = async () => {
+      cursor.classList.remove('press');
+      void cursor.offsetWidth;
+      cursor.classList.add('press');
+      await wait(550);
+      cursor.classList.remove('press');
+    };
+
     let i = 0;
-    setInterval(() => {
-      screens[i].classList.remove('active');
+    const step = async () => {
+      const screen = screens[i];
+      await wait(1300);
+      if (screen.dataset.tap) {
+        const [x, y] = screen.dataset.tap.split(' ').map(Number);
+        cursor.classList.add('show');
+        moveTo(x, y);
+        await wait(800);
+        await press();
+      } else if (screen.dataset.swipe) {
+        const [x1, y1, x2, y2] = screen.dataset.swipe.split(' ').map(Number);
+        cursor.classList.add('show');
+        moveTo(x1, y1);
+        await wait(800);
+        cursor.classList.add('press', 'dragging');
+        moveTo(x2, y2);
+        await wait(950);
+        cursor.classList.remove('press', 'dragging');
+      } else {
+        cursor.classList.remove('show');
+        await wait(1200);
+      }
+      screen.classList.remove('active');
       i = (i + 1) % screens.length;
       screens[i].classList.add('active');
-    }, 2600);
+      step();
+    };
+    step();
   });
 })();
