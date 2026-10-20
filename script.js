@@ -124,3 +124,18 @@ document.addEventListener('click', (e) => {
     showEmailToast(copied ? 'Email copied: ' + address : 'Email: ' + address);
   });
 });
+
+// Prototype flow demos: cycle through each phone's screens
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-proto-demo]').forEach((phone) => {
+    const screens = Array.from(phone.querySelectorAll('img'));
+    if (reduce || screens.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      screens[i].classList.remove('active');
+      i = (i + 1) % screens.length;
+      screens[i].classList.add('active');
+    }, 2600);
+  });
+})();

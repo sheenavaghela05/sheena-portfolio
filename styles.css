@@ -552,6 +552,22 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   .term-head span:nth-child(3){ display:none; }
 }
 
+/* ---------- PROTOTYPE FLOW DEMOS (auto-playing phone screens) ---------- */
+.proto-demos{ display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin:28px 0 4px; }
+.proto-demo{ margin:0; display:flex; flex-direction:column; align-items:center; gap:14px; }
+.proto-phone{
+  width:300px; max-width:100%; aspect-ratio:600 / 1300; position:relative; overflow:hidden;
+  border-radius:34px; border:10px solid #14181f; background:#fff; box-sizing:content-box;
+  box-shadow:0 30px 54px -20px rgba(20,24,31,0.45), 0 6px 18px rgba(20,24,31,0.15);
+}
+.proto-phone img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  opacity:0; transition:opacity .6s ease;
+}
+.proto-phone img.active{ opacity:1; }
+.proto-demo figcaption{ font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em; }
+@media (max-width:420px){ .proto-phone{ width:260px; } }
+
 /* ---------- SCROLLING SCREEN DEMO ---------- */
 .scroll-demo-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; padding:12px 0 8px; }
 .scroll-demo{
