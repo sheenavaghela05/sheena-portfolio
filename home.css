@@ -184,7 +184,7 @@
   background:none; border:none;
 }
 .hm-polaroid{
-  position:relative; padding:14px 14px 56px; background:#fff; max-width:400px;
+  position:relative; padding:14px; background:#fff; max-width:400px;
   box-shadow:0 14px 30px -16px rgba(33,40,32,.4); transform:rotate(-2.5deg);
   margin:clamp(0px,8vw,110px) 0 0; transition:transform 1s cubic-bezier(.3,1.4,.5,1);
 }
