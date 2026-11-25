@@ -279,3 +279,11 @@
   font-size:11px; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap;
 }
 .home .case-media.hm-thumb .frame{ background:var(--paper-alt); }
+/* keep the five nav links beside the badge on small phones */
+@media (max-width:420px){
+  .home .nav{ flex-wrap:nowrap; gap:12px; }
+  .home .nav-links{ gap:10px; font-size:10.5px; letter-spacing:.05em; }
+}
+.hm-inline-link{ color:var(--moss-dark); border-bottom:1px solid var(--moss-dark); }
+.hm-inline-link:hover{ color:var(--ink); border-color:var(--ink); }
+.hm-foot a[href^="mailto"]{ text-transform:none; letter-spacing:.02em; }
