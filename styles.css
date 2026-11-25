@@ -701,3 +701,16 @@ footer a:hover{ color:var(--moss-dark); border-color:var(--moss-dark); }
   max-width:calc(100vw - 32px); text-align:center;
 }
 .email-toast.show{ opacity:1; transform:translate(-50%, 0); }
+
+/* ---------- Personal mark in the nav ---------- */
+.nav-name{ display:inline-flex; align-items:center; gap:10px; }
+.nav-mark{
+  display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;
+  width:34px; height:34px; border-radius:50%; background:var(--moss-dark); color:var(--paper);
+  font-family:'Caveat Brush', cursive; font-size:19px; line-height:1; letter-spacing:0; padding-bottom:2px;
+  transform:rotate(-8deg); transition:transform .35s cubic-bezier(.3,1.5,.5,1);
+}
+.nav-name:hover .nav-mark{ transform:rotate(6deg) scale(1.08); }
+@media (max-width:420px){ .nav-mark{ width:30px; height:30px; font-size:17px; } }
+/* on narrow screens the badge stands in for the full name so the links stay on one line */
+@media (max-width:520px){ .nav-label{ display:none; } }
